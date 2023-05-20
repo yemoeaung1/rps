@@ -1,10 +1,12 @@
-//const choices = ["rock", "paper", "scissors"]
 
 const choices = {
     rock: 0,
     paper: 1,
     scissors: 2
 }
+
+let playerWin = 0;
+let compWin = 0;
 
 
 function getComputerChoice() {
@@ -26,13 +28,21 @@ function determineWin(compChoice, playerChoice) {
         return "tied";
 }
 
-let playerWin = 0;
-let compWin = 0;
+function game() {
 
-while(playerWin < 5 && compWin < 5) {
-    //let playerPrompt = prompt("Pick: ")
-    let playerChoice = getComputerChoice();
-    let compChoice = getComputerChoice();
-    console.log(determineWin(compChoice, playerChoice));
-    
+    while(playerWin < 5 && compWin < 5) {
+        //let playerPrompt = prompt("Pick: ")
+        let playerChoice = getComputerChoice();
+        let compChoice = getComputerChoice();
+        determineWin(compChoice, playerChoice); 
+    }
+    console.log(playerWin);
+    console.log(compWin);
+    if(playerWin == 5) {
+        console.log("player wins the game");
+    } else if(compWin == 5) {
+        console.log("computer wins the game ");
+    }
 }
+
+game();

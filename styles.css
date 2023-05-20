@@ -1,0 +1,44 @@
+*{
+    background-color: grey;
+}
+.title {
+    text-align: center;
+    font-size: 100px;
+}
+
+.main-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-box, .cp-box {
+    padding: 100px;
+    text-align: center;
+    font-size: 50px;
+}
+.player-box img {
+    width: 30vw;
+    height: 30vw;
+  }
+
+.player-box img {
+    object-fit: cover;
+    padding: 20px;
+}
+
+
+.cp-box img {
+    width: 30vw;
+    height: 30vw;
+  }
+
+.cp-box img {
+    transform: scaleX(-1);
+    object-fit: cover;
+    padding: 20px;
+}
